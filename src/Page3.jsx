@@ -10,7 +10,7 @@ const Page3 = () => {
   return (
     <div>
       <div className={`my-20 text-justify max-w-full overflow-x-hidden flex-row transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        <div className={`w-30 max-w-[100px] bg-orange-500 h-1 mx-0 my-5 relative top-3 left-8 sm:left-16 md:left-24 lg:left-32 
+        <div className={`w-30 max-w-[100px] bg-orange-500 h-1 mx-0 my-5 relative top-3 left-8 sm:left-16 md:left-24 lg:left-32
           transition-all duration-700 transform ${isVisible ? 'scale-x-100' : 'scale-x-0'}`}
         ></div>
         <p className={`text-orange-500 font-semibold text-2xl sm:text-3xl md:text-4xl relative -top-1 left-6 sm:left-14 md:left-20 lg:left-28 mx-0 px-4
@@ -31,8 +31,8 @@ const Page3 = () => {
             "CA Aspirant Students",
             "Consultant, Counsellors"
           ].map((text, index, array) => (
-            <li 
-              key={index} 
+            <li
+              key={index}
               className={`relative bg-white transition-all duration-700 transform
                 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[-50px] opacity-0'}`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -45,18 +45,34 @@ const Page3 = () => {
                 <span className="text-base sm:text-lg group-hover:text-orange-600 transition-colors duration-300">{text}</span>
               </div>
               {index !== array.length - 1 && (
-                <div className="border-b border-dotted border-gray-400 w-full my-2"></div>
+                <div className="border-b border-dotted border-gray-400 w-[40rem] my-2"></div>
               )}
             </li>
           ))}
         </ul>
-        <div className={`relative mt-8 sm:mt-0 sm:left-[300px] md:left-[400px] lg:left-[600px] z-0
+        <div className={`block lg:hidden relative mt-8 transition-all duration-1000 transform 
+          ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[50px] opacity-0'}`}>
+          <div className="relative
+            w-[300px] sm:w-[400px] md:w-[450px]
+            h-[300px] sm:h-[400px] md:h-[450px]
+            left-4 sm:left-24 md:left-48
+            overflow-hidden rounded-lg
+            hover:shadow-2xl transition-shadow duration-300">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent mix-blend-overlay pointer-events-none" />
+            <img
+              src="./Admission page Assets/img3.jpg"
+              alt="success"
+              className="w-full h-full object-cover md:bg-white md:opacity-100 transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+        </div>
+        <div className={`hidden lg:block relative sm:mt-0 sm:left-[300px] md:left-[400px] lg:left-[600px] z-0
           transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[50px] opacity-0'}`}>
           <div className="relative
-            w-[300px] sm:w-[400px] md:w-[450px] lg:w-[500px]
-            h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]
-            sm:bottom-[450px] md:bottom-[480px] lg:bottom-[500px]
-            left-4 sm:left-24 md:left-48 lg:left-96
+            w-[500px]
+            h-[500px]
+            bottom-[500px]
+            left-96
             overflow-hidden rounded-lg
             hover:shadow-2xl transition-shadow duration-300">
             <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent mix-blend-overlay pointer-events-none" />

@@ -5,9 +5,8 @@ const Page1 = () => {
       <p className="text-orange-500 font-semibold text-4xl relative -top-1 mx-0">
         Overview
       </p>
-
+      
       <div className="flex flex-col md:flex-row mx-auto gap-6 mt-8">
-       
         <div className="w-full md:w-[60%] h-auto flex flex-col">
           <div className="text-lg text-justify h-auto">
             <p>
@@ -18,8 +17,8 @@ const Page1 = () => {
               you for a successful career in the finance industry.
             </p>
           </div>
-          <div className="w-[60rem] h-[30rem] bg-gray-200 relative -left-[8rem]">
-            <p className="relative left-[8rem] top-[5rem] text-lg w-[46rem] text-justify">
+          <div className="w-full md:w-[60rem] h-auto md:h-[20rem] bg-gray-200 relative md:-left-[8rem] px-4 md:px-0">
+            <p className="relative md:left-[8rem] md:top-[1rem] text-lg w-full md:w-[46rem] text-justify py-4 md:py-0">
               The Practical MBA program offers a comprehensive approach to
               business education, blending rigorous coursework with practical
               experiences. Participants have the opportunity to gain one year
@@ -37,21 +36,19 @@ const Page1 = () => {
             </p>
           </div>
         </div>
-
- 
-        <div className="w-[60rem] md:w-[40%] relative min-h-[300px] sm:min-h-[400px] md:min-h-full">
-          <div className="relative left-[5rem] h-full w-[33rem] rounded-lg overflow-hidden transition-transform duration-500 transform hover:scale-105">
+        
+        <div className="w-full md:w-[60rem] relative min-h-[300px] sm:min-h-[400px] md:min-h-full">
+          <div className="relative md:left-[5rem] h-full w-full md:w-[33rem] rounded-lg overflow-hidden transition-transform duration-500 transform hover:scale-105">
             <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent z-10"/>
             <img
               src="./public/Admission page Assets/Akhilesh sir.png"
               alt="Akhilesh Sir"
-              className="w-full h-full object-cover rounded-lg opacity-0 animate-fadeIn"
+              className="w-full h-full object-cover rounded-lg opacity-0 animate-fadeIn md:relative md:left-[2.3rem]"
             />
           </div>
         </div>
       </div>
-
-     
+      
       <style jsx>{`
         @keyframes fadeIn {
           0% {
