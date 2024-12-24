@@ -26,15 +26,15 @@ const InfiniteScrollGrid = () => {
 
   const LogoRow = ({ images, direction }) => (
     <div className={`flex whitespace-nowrap ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'} hover:pause py-4 md:py-8`}>
-      <div className="flex gap-4 md:gap-8">
+      <div className="flex gap-[1rem] md:gap-[1rem]">
         {[...images, ...images].map((src, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-48 md:w-64 h-24 md:h-32 flex justify-center items-center bg-white rounded-lg p-2 md:p-4 shadow-md 
+            className="flex-shrink-0 w-44 md:w-64 h-24 md:h-32 flex justify-center items-center bg-white rounded-lg p-2 md:p-4 shadow-md 
                       transition-all duration-300 ease-in-out transform 
                       hover:shadow-2xl hover:scale-110 hover:z-10 hover:bg-gray-50"
           >
-            <div className="w-full h-full flex items-center justify-center">
+            <div className="w-[8rem] h-[8rem] flex items-center justify-center">
               <img
                 src={src}
                 alt={`logo ${index + 1}`}
@@ -83,14 +83,14 @@ const InfiniteScrollGrid = () => {
         </p>
       </div>
 
-      <div className="mt-8 md:mt-15">
-        <div className="overflow-hidden my-8 md:my-12">
+      <div className="mt-2 md:mt-15">
+        <div className="overflow-hidden my-8 md:my-12 ">
           <LogoRow images={firstRow} direction="left" />
         </div>
-        <div className="overflow-hidden my-8 md:my-12">
+        <div className="overflow-hidden my-8 md:my-12 relative lg:bottom-[6rem] sm:bottom-[1.5rem] md:bottom-[6rem]">
           <LogoRow images={secondRow} direction="right" />
         </div>
-        <div className="overflow-hidden my-8 md:my-12">
+        <div className="overflow-hidden my-8 md:my-12 relative lg:bottom-[12rem] sm:bottom-[3rem] md:bottom-[12rem] ">
           <LogoRow images={thirdRow} direction="left" />
         </div>
       </div>
