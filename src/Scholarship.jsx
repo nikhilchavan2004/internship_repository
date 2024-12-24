@@ -1,4 +1,4 @@
-const Page5 = () => {
+const Scholarship = () => {
   return (
     <div>
       <div className="text-justify max-w-full overflow-x-hidden flex-row relative">
@@ -58,4 +58,4 @@ const Page5 = () => {
   );
 };
 
-export default Page5;
+export default Scholarship;

@@ -1,4 +1,4 @@
-const Page1 = () => {
+const AddmissionPage = () => {
   return (
     <div className="container mx-auto px-4">
       <div className="w-30 max-w-[100px] bg-orange-500 h-1 mx-0 my-5 relative top-3"></div>
@@ -66,4 +66,4 @@ const Page1 = () => {
   );
 };
 
-export default Page1;
+export default AddmissionPage;

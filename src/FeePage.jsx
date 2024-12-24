@@ -1,4 +1,4 @@
-const Page6 = () => {
+const FeePage = () => {
   return (
     <div className="p-4">
       <div className="w-96 max-w-[100px] bg-orange-500 h-1 mx-0 my-5 relative top-3 left-8 sm:left-16 md:left-24 lg:left-32 xl:left-36"></div>
@@ -75,4 +75,4 @@ const Page6 = () => {
   );
 };
 
-export default Page6;
+export default FeePage;

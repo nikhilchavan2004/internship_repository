@@ -1,6 +1,6 @@
 import  { useState, useEffect } from 'react';
 
-const Page2 = () => {
+const ApplicationPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -77,4 +77,4 @@ const Page2 = () => {
   );
 };
 
-export default Page2;
+export default ApplicationPage;

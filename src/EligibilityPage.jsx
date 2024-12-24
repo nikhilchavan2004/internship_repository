@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const Page3 = () => {
+const EligibilityPage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -88,4 +88,4 @@ const Page3 = () => {
   );
 };
 
-export default Page3;
+export default EligibilityPage;

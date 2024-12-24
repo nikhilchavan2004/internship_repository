@@ -1,4 +1,4 @@
-const Page = () => {
+const HostelFee = () => {
   return (
     <div className="relative top-28">
       <div className="block lg:flex">
@@ -97,4 +97,4 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-export default Page;
+export default HostelFee;
