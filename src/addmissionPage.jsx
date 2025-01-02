@@ -1,69 +1,189 @@
-const AddmissionPage = () => {
+import React from 'react';
+import '../../styles/Headers.css';
+import logo from '../../assets/images/FBS_logo.png';
+import 'boxicons/css/boxicons.min.css';
+import { Link } from 'react-router-dom';
+
+const Headers = () => {
   return (
-    <div className="container mx-auto px-4">
-      <div className="w-30 max-w-[100px] bg-orange-500 h-1 mx-0 my-5 relative top-3"></div>
-      <p className="text-orange-500 font-semibold text-4xl relative -top-1 mx-0">
-        Overview
-      </p>
+    <>
+      <div className="topbar flex flex-col sm:flex-row justify-between items-center p-1">
       
-      <div className="flex flex-col md:flex-row mx-auto gap-6 mt-8">
-        <div className="w-full md:w-[60%] h-auto flex flex-col">
-          <div className="text-lg text-justify h-auto">
-            <p>
-              Imagine working on real-life projects, analyzing financial data,
-              and developing strategies to drive business growth. You'll have
-              the opportunity to work with experienced finance professionals,
-              gaining invaluable insights and practical skills that will prepare
-              you for a successful career in the finance industry.
-            </p>
-          </div>
-          <div className="w-full md:w-[60rem] h-auto md:h-[20rem] bg-gray-200 relative md:-left-[8rem] px-4 md:px-0">
-            <p className="relative md:left-[8rem] md:top-[1rem] text-lg w-full md:w-[46rem] text-justify py-4 md:py-0">
-              The Practical MBA program offers a comprehensive approach to
-              business education, blending rigorous coursework with practical
-              experiences. Participants have the opportunity to gain one year
-              of valuable job experience, giving them a competitive edge in the
-              job market. Additionally, the program provides certifications
-              covering various crucial business areas. Alongside this,
-              participants receive focused training in soft skills and other
-              valuable sessions. Through hands-on learning & a customizable
-              curriculum, participants develop critical thinking & problem
-              solving abilities. The program also fosters networking
-              opportunities, preparing individuals to thrive in the ever-evolving
-              business landscape. Join the Practical MBA to unlock your
-              business potential, acquire real-world experience, earn
-              certifications, and enhance your soft skills.
-            </p>
-          </div>
+        <div className="social-icons hidden sm:flex">
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <i className='bx bxl-youtube' style={{ color: 'red' }}></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <i className='bx bxl-instagram' style={{ color: '#ff07cf' }}></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            <i className='bx bxl-linkedin' style={{ color: '#0000a8' }}></i>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <i className='bx bxl-facebook' style={{ color: '#3b5998' }}></i>
+          </a>
+          <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+            <i className='bx bxl-whatsapp' style={{ color: '#00d100' }}></i>
+          </a>
         </div>
-        
-        <div className="w-full md:w-[60rem] relative min-h-[300px] sm:min-h-[400px] md:min-h-full">
-          <div className="relative md:left-[5rem] h-full w-full md:w-[33rem] rounded-lg overflow-hidden transition-transform duration-500 transform hover:scale-105">
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent z-10"/>
-            <img
-              src="./public/Admission page Assets/Akhilesh sir.png"
-              alt="Akhilesh Sir"
-              className="w-full h-full object-cover rounded-lg opacity-0 animate-fadeIn md:relative md:left-[2.3rem]"
-            />
+
+        <Link to='/announcements'>
+          <div className="info flex items-center">
+            <i className='bx bx-bell bell-icon'></i>
+            <span className="announcement">Announcement</span>
           </div>
+        </Link>
+
+        <div className="contact-info flex items-center">
+          <i className='bx bxs-phone'></i>
+          <span className='relative right-[1rem]'>(+91) 915 888 2688</span>
+          <i className='bx bxs-envelope '></i>
+          <span className='relative right-[0.8rem]'>admission@fbsedu.in</span>
         </div>
       </div>
+
+     
+      <header className='headers-headers'>
+        <div className="headers-container">
+         
+          <div className="logo-container">
+            <img src={logo} alt="FINXL Business School" className="logo" />
+          </div>
+
+          <div className="nav-btn">
+            <div className="nav-links">
+              <ul>
+                <li className="nav-link" style={{ "--i": ".6s" }}>
+                  <Link to='/'>Home</Link>
+                </li>
+                <li className="nav-link" style={{ "--i": ".85s" }}>
+                  <Link to='/about' >Why FBS<i className="fas fa-caret-down"></i></Link>
+                 
+                 
+
+                  <div className="dropdown">
+                    <ul>
+                      <li className="dropdown-link">
+                        <Link to='/about'>Overview</Link>
+                      </li>
+                      <li className="dropdown-link">
+                        <Link to='/about/mission'>Vission & Mission</Link>
+                      </li>
+                      <li className="dropdown-link">
+                        <a href="#">Recognition & Approvals</a>
+                      </li>
+                      <li className="dropdown-link">
+                        <Link to='/about/campus'>Campus Life</Link>
+                      </li>
+
+                      <div className="arrow"></div>
+                    </ul>
+                  </div>
+                </li>
+                <li className="nav-link" style={{ "--i": "1.1s" }}>
+                  <Link to='/courses'>Courses<i className="fas fa-caret-down"></i></Link>
+                  <div className="dropdown">
+                    <ul>
+                      <li className="dropdown-link">
+                        <Link to='/courses'>View Courses</Link>
+                      </li>
+                      <li className="dropdown-link">
+                        <Link to='/certifications'>View Certification</Link>
+                      </li>
+
+                      <div className="arrow"></div>
+                    </ul>
+                  </div>
+                </li>
+                <li className="nav-link" style={{ "--i": "1.35s" }}>
+                  <Link to='/eligibility'>Addmissions<i className="fas fa-caret-down"></i></Link>
+                  <div className="dropdown">
+                    <ul>
+                      <li className="dropdown-link">
+                        <Link to='/eligibility'>Overview & Eligiblity</Link>
+                      </li>
+                      <li className="dropdown-link">
+                        <Link to='/scholarship'>Scholarships</Link>
+                      </li>
+                      <li className="dropdown-link">
+                        <Link to='/fees'>Fee Structure</Link>
+                      </li>
+                      <div className="arrow"></div>
+                    </ul>
+                  </div>
+                </li>
+                <li className="nav-link" style={{ "--i": "1.35s" }}>
+                  <Link to='/careers'>Careers</Link>
+                </li>
+                <li className="nav-link" style={{ "--i": "1.35s" }}>
+                  <Link to='/placed-student'>Placments<i className="fas fa-caret-down"></i></Link>
+                  <div className="dropdown">
+                    <ul>
+                      <li className="dropdown-link">
+                        <Link to='/placed-student'>Placed Students</Link>
+                      </li>
+                      <li className="dropdown-link">
+                        <Link to='/recruiters'>Our Recruiters</Link>
+                      </li>
+                      <li className="dropdown-link">
+                        <Link to='/placment-team'>Placment Team</Link>
+                      </li>
+                      <li className="dropdown-link">
+                        <Link to='/placment-policy'>Placement Policy</Link>
+                      </li>
+                      <div className="arrow"></div>
+                    </ul>
+                  </div>
+                </li>
+                <li className="nav-link" style={{ "--i": "1.35s" }}>
+                  <Link to='/contact'>Contact Us</Link>
+                </li>
+                <li className="nav-link" style={{ "--i": "1.35s" }}>
+                  <Link to='/register'>Register</Link>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div className="hamburger-menu-container">
+            <div className="hamburger-menu">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
       
       <style jsx>{`
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
+        @media (max-width: 640px) {
+          .topbar {
+            padding-top: 0.5rem; /* Reduce top padding */
+            padding-bottom: 0.5rem; /* Adjust bottom padding if needed */
           }
-          100% {
-            opacity: 1;
+
+          .headers-container {
+            padding-top: 0.5rem; /* Reduce top padding */
+            padding-bottom: 0.5rem; /* Adjust bottom padding if needed */
+            overflow-x: hidden; /* Prevent overflow on smaller screens */
           }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 1s ease-in forwards;
+
+          .nav-links ul {
+            flex-direction: column; /* Stack nav links vertically */
+            align-items: center; /* Center nav links */
+            width: 100%; /* Ensure full width */
+          }
+
+          .nav-link {
+            margin-bottom: 0.5rem; /* Space between nav links */
+            width: 100%; /* Ensure full width for each link */
+            text-align: center; /* Center text */
+          }
         }
       `}</style>
-    </div>
-  );
-};
 
-export default AddmissionPage;
+    </>
+  );
+}
+
+export default Headers;
